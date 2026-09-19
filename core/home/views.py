@@ -8,9 +8,9 @@ from django.shortcuts import render
 
 def home(request):
     people=[
-        {'name':'Alice', 'age': 30},
+        {'name':'Alice', 'age': 10},
         {'name':'Bob', 'age': 25},
-        {'name':'Charlie', 'age': 35},
+        {'name':'Charlie', 'age': 13},
         {'name':'David', 'age': 40},
         {'name':'Eve', 'age': 32}
     ]
