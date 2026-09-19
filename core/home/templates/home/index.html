@@ -3,12 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Learning Django</title>
 </head>
 <body>
     <h1>Welcome to the Home Page</h1>
     <p>This is the home page of the application.</p>
     <a href="/success/">Go to Success Page</a><br>
-    <a href="/admin">Admin Login</a>
+    <a href="/admin">Admin Login</a><br><br>
+
+    {{people}}
+
+    <table border="1">
+        <tr>
+            <th>S.No.</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        {% for person in people %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{person.name}}</td>
+            <td>{{person.age}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <script>
+        console.log("Hey Django")
+    </script>
 </body>
 </html>

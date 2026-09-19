@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, request
 from django.shortcuts import render
 
 
@@ -7,7 +7,15 @@ from django.shortcuts import render
 
 
 def home(request):
- return render(request, 'home/index.html')  
+    people=[
+        {'name':'Alice', 'age': 30},
+        {'name':'Bob', 'age': 25},
+        {'name':'Charlie', 'age': 35},
+        {'name':'David', 'age': 40},
+        {'name':'Eve', 'age': 32}
+    ]
+    
+    return(render(request, 'home/index.html', context={'people':people}))
 
 
 
