@@ -7,6 +7,7 @@ from django.shortcuts import render
 
 
 def home(request):
+
     people=[
         {'name':'Alice', 'age': 10},
         {'name':'Bob', 'age': 25},
@@ -15,17 +16,20 @@ def home(request):
         {'name':'Eve', 'age': 32}
     ]
     
-    return(render(request, 'home/index.html', context={'people':people}))
+    return(render(request, 'home/index.html', context={'people':people, 'page': 'Learning Django'}))
 
 
 
 def success_page(request):
+    context={'page': 'Success'}
     print("Success page accessed")
     return HttpResponse("<h1>Success!</h1>")
 
 
 def about(request):
-    return render(request, 'home/about.html')
+    context = {'page': 'About'}
+    return render(request, 'home/about.html',context)
 
 def contact(request):
-    return render(request, 'home/contact.html')
+    context ={'page': 'Contact'}
+    return render(request, 'home/contact.html',context)
