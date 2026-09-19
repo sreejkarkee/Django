@@ -22,3 +22,10 @@ def home(request):
 def success_page(request):
     print("Success page accessed")
     return HttpResponse("<h1>Success!</h1>")
+
+
+def about(request):
+    return render(request, 'home/about.html')
+
+def contact(request):
+    return render(request, 'home/contact.html')
