@@ -19,7 +19,7 @@
             <td>{{forloop.counter}}</td>
             <td>{{person.name}}</td>
             <td>{{person.age}}</td>
-            <td {% if person.age >= 18 %} style="background-color: lightgreen;" {% else %} style="background-color: lightcoral;" {% endif %}>
+            <td {% if person.age >= 18 %} style="background-color: lightgreen;" {% else %} style="background-color: red;" {% endif %}>
                {% if person.age >= 18 %}
                👍🏻
                {% else %}
