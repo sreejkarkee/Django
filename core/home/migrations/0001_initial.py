@@ -19,8 +19,7 @@ class Migration(migrations.Migration):
                 ('age', models.IntegerField(default=18)),
                 ('email', models.EmailField(max_length=254)),
                 ('address', models.TextField(null=True, blank=True)),
-                ('image', models.ImageField(upload_to='')),
-                ('file', models.FileField(upload_to='')),
+                
             ],
         ),
     ]
