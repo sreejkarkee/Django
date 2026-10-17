@@ -7,6 +7,5 @@ class Student(models.Model):
     age = models.IntegerField(default=18)
     email = models.EmailField()
     address = models.TextField()
-    image = models.ImageField()
-    file = models.FileField()
+
     
