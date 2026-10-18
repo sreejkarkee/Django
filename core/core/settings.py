@@ -42,7 +42,8 @@ INSTALLED_APPS = [
 
 EXTERNAL_APPS={
     'accounts': 'accounts',
-    'home': 'home'
+    'home': 'home',
+    'vege': 'vege'
 }
 INSTALLED_APPS+= list(EXTERNAL_APPS.values())
 
