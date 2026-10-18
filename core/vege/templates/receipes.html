@@ -1,0 +1,36 @@
+{%extends 'home/base.html'%} {%block start%}
+<h1>Receipes</h1>
+<p>This is the receipes page of the application.</p>
+<div>
+  <form>
+    <div class="form-group">
+      <label for="receipe_name">Receipe Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="receipe_name"
+        placeholder="Enter receipe name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="receipe_description">Receipe Description</label>
+      <input
+        type="text"
+        class="form-control"
+        id="receipe_description"
+        placeholder="Enter receipe description"
+      />
+    </div>
+    <div class ="from group">
+        <label for ="receipe_image">Receipe Image</label>
+        <input
+            type="file"
+            class="form-control"
+            id="receipe_image"
+        />
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{%endblock%}
