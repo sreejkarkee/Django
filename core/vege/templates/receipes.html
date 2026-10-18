@@ -2,11 +2,14 @@
 <h1>Receipes</h1>
 <p>This is the receipes page of the application.</p>
 <div>
-  <form class="col-6 mx-auto card p-3 shadow-lg">
+  <form class="col-6 mx-auto card p-3 shadow-lg" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
     <h1>Add Receipe</h1>
+    <hr />
     <div class="form-group">
       <label for="receipe_name">Receipe Name</label>
       <input
+        name="receipe_name"
         type="text"
         class="form-control"
         id="receipe_name"
@@ -16,22 +19,24 @@
     <div class="form-group">
       <label for="receipe_description">Receipe Description</label>
       <input
+        name="receipe_description"
         type="text"
         class="form-control"
         id="receipe_description"
         placeholder="Enter receipe description"
       />
     </div>
-    <div class ="from group">
-        <label for ="receipe_image">Receipe Image</label>
-        <input
-            type="file"
-            class="form-control"
-            id="receipe_image"
-        />
+    <div class="from group">
+      <label for="receipe_image">Receipe Image</label>
+      <input
+        name="receipe_image"
+        type="file"
+        class="form-control"
+        id="receipe_image"
+      />
     </div>
-    
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <hr />
+    <button type="submit" class="btn btn-success">Add Receipe</button>
   </form>
 </div>
 {%endblock%}
